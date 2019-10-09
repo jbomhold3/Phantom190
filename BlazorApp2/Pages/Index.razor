@@ -1,21 +1,21 @@
 ﻿@page "/"
     <EditForm Model="model">
         <PeterLeslieMorris.Blazor.Validation.Validate />
-        <InputSelect @bind-Value="model.Number">
+        @model.Number <InputSelect @bind-Value="model.NumberAsString" >
             <option value="1">1</option>
             <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
         </InputSelect>
-
         <InputSelect @bind-Value="model.Letter">
             <option value="a">a</option>
             <option value="b">b</option>
         </InputSelect>
     </EditForm>
-
     <EditForm Model="model2">
         <PeterLeslieMorris.Blazor.Validation.Validate />
         int has a default value of 0 so
-        <InputSelect @bind-Value="model2.Number">
+        <InputSelect @bind-Value="model2.NumberAsString">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="0">This will show as default</option>
@@ -30,9 +30,12 @@
 {
     TestModel model = new TestModel();
     TestModel model2 = new TestModel();
-
     override protected void OnInitialized() {
-        model.Number = 1;
+        model.Number = 3;
         model.Letter = "b";
+        
+        
     }
+
+    
 }

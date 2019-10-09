@@ -8,7 +8,6 @@ namespace BlazorApp2.FluentValidators
         public TestModelValidator()
         {
             RuleFor(x => x.Letter).NotEmpty();
-            RuleFor(x => x.Number).GreaterThan(2);
         }
     }
 }
