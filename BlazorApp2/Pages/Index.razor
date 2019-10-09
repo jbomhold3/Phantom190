@@ -1,0 +1,23 @@
+﻿@page "/"
+    <EditForm Model="model">
+        <PeterLeslieMorris.Blazor.Validation.Validate />
+        <InputSelect @bind-Value="model.Number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </InputSelect>
+
+        <InputSelect @bind-Value="model.Letter">
+            <option value="a">a</option>
+            <option value="b">b</option>
+        </InputSelect>
+    </EditForm>
+
+@code
+{
+    TestModel model = new TestModel();
+
+    override protected void OnInitialized() {
+        model.Number = 1;
+        model.Letter = "b";
+    }
+}
