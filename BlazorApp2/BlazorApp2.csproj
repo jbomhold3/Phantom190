@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BlazorStrap" Version="1.0.105" />
     <PackageReference Include="FluentValidation" Version="8.5.0" />
     <PackageReference Include="PeterLeslieMorris.Blazor.FluentValidation" Version="1.0.0" />
     <PackageReference Include="PeterLeslieMorris.Blazor.Validation" Version="1.0.0" />

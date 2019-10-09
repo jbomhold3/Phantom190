@@ -12,20 +12,18 @@
             <option value="b">b</option>
         </InputSelect>
     </EditForm>
+<hr />
+<h3>With BlazorStrap BSInput</h3>
     <EditForm Model="model2">
         <PeterLeslieMorris.Blazor.Validation.Validate />
-        int has a default value of 0 so
-        <InputSelect @bind-Value="model2.NumberAsString">
+        <BSInput InputType="InputType.Select" @bind-Value="model.Number">
             <option value="1">1</option>
             <option value="2">2</option>
-            <option value="0">This will show as default</option>
-        </InputSelect>
-        string has a default value of empty so
-        <InputSelect @bind-Value="model2.Letter">
-            <option value="a">a will show as default</option>
-            <option value="b">b</option>
-        </InputSelect>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </BSInput>
     </EditForm>
+ 
 @code
 {
     TestModel model = new TestModel();
@@ -35,7 +33,5 @@
         model.Letter = "b";
         
         
-    }
-
-    
+    }    
 }
