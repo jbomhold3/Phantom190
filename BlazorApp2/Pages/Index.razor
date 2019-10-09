@@ -12,9 +12,24 @@
         </InputSelect>
     </EditForm>
 
+    <EditForm Model="model2">
+        <PeterLeslieMorris.Blazor.Validation.Validate />
+        int has a default value of 0 so
+        <InputSelect @bind-Value="model2.Number">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="0">This will show as default</option>
+        </InputSelect>
+        string has a default value of empty so
+        <InputSelect @bind-Value="model2.Letter">
+            <option value="a">a will show as default</option>
+            <option value="b">b</option>
+        </InputSelect>
+    </EditForm>
 @code
 {
     TestModel model = new TestModel();
+    TestModel model2 = new TestModel();
 
     override protected void OnInitialized() {
         model.Number = 1;
